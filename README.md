@@ -1,1 +1,1 @@
-# variational_classifier
+# Variational Bayes Classifier
