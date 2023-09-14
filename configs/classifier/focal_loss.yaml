@@ -1,0 +1,2 @@
+class_type: deterministic
+class_loss_fn: Focal

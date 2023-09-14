@@ -1,0 +1,6 @@
+class_type: variational
+mean_orth: False
+mean_prior: null
+var_equi: True
+var_prior: 1
+n_samples: 100

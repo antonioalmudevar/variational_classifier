@@ -1,0 +1,5 @@
+class_type: variational_mean
+mean_orth: False
+mean_prior: null
+var_prior: 1
+n_samples: 10
