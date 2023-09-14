@@ -15,7 +15,7 @@ pip install -r requirements.txt
 The following explains how to launch the experiments proposed in the paper. To do so, each of the scripts found in the **bin** folder is used. 
 In all of them, some of their input arguments are of the form *config_x*. In this case, the different values that *config_x* can take are those found in the **configs/x** directory. In the case where **x=data**, not all scripts are prepared to be launched with all databases in the **configs/data** folder. Only those presented in the paper.
 The results of all experiments are stored in the **results** folder which will be created in case it do not exist.
-We do not provide the trained models or the results, as they exceed the allowed storage limit and do not contribute to the understanding of our proposal. Except for ImageNet, the experiments are quickly trainable and reproducible.
+We do not provide the trained models or the results. Except for ImageNet, the experiments are quickly trainable and reproducible.
 
 
 ### Classification performance
