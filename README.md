@@ -7,6 +7,7 @@ To create the working environment to run the different experiments you must exec
 ```
 python3 -m venv venv
 source ./venv/bin/activate
+python setup.py develop
 pip install -r requirements.txt
 ```
 
@@ -28,6 +29,8 @@ For example, in case we want to train a vanilla classifier with CIFAR-10 and Res
 python train_classification.py cifar10 resnet20 vanilla sgd-128-1e-1 --n_iters 5
 ```
 The results of this training are the models of each iteration in **results/.../models** and the Top-1 and Top-5 Accuracy of the train and test datasets in **results/.../scores**.
+
+where **/.../** means **config_data/config_encoder/config_classifier/config_training/** (here and in the next experiments)
 
 
 ### Calibrated uncertainty
