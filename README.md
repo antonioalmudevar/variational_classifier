@@ -32,7 +32,7 @@ python train_classification.py cifar10 resnet20 vanilla sgd-128-1e-1 --n_iters 5
 ```
 The results of this training are the models of each iteration in **results/.../models** and the Top-1 and Top-5 Accuracy of the train and test datasets in **results/.../scores**.
 
-where **/.../** means **config_data/config_encoder/config_classifier/config_training/** (here and in the next experiments)
+where **/.../** means **/config_data/config_encoder/config_classifier/config_training/** (here and in the next experiments)
 
 
 ### Calibrated uncertainty
