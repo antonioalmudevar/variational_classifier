@@ -38,12 +38,12 @@ where **/.../** means **/config_data/config_encoder/config_classifier/config_tra
 ### Calibrated uncertainty
 To train the models needed for the experiments in this section, the script **train_uncertainty.py** must be used. Since the arguments depend on the chosen calibration method, here we give directly the example of how to launch the training of each method according to the parameters given in the article.
 ```
-python train_uncertainty.py vanilla cifar100 resnet56 sgd-128-1e-1
-python train_uncertainty.py temperature cifar100 resnet56 sgd-128-1e-1
-python train_uncertainty.py ensembles cifar100 resnet56 sgd-128-1e-1 --n_ensembles 10
-python train_uncertainty.py mc_dropout cifar100 resnet56 sgd-128-1e-1 --dropout_rate 0.5 --n_samples 128
-python train_uncertainty.py ll_dropout cifar100 resnet56 sgd-128-1e-1 --dropout_rate 0.5 --n_samples 128
-python train_uncertainty.py vc cifar100 resnet56 sgd-128-1e-1 fvvc-orth-10 --n_samples 128
+python train_uncertainty.py cifar100 resnet56 vanilla sgd-128-1e-1
+python train_uncertainty.py cifar100 resnet56 temperature sgd-128-1e-1
+python train_uncertainty.py cifar100 resnet56 ensembles sgd-128-1e-1 --n_ensembles 10
+python train_uncertainty.py cifar100 resnet56 mc_dropout sgd-128-1e-1 --dropout_rate 0.5 --n_samples 128
+python train_uncertainty.py cifar100 resnet56 ll_dropout sgd-128-1e-1 --dropout_rate 0.5 --n_samples 128
+python train_uncertainty.py cifar100 resnet56 fvvc-orth-10 sgd-128-1e-1 --n_samples 128
 ```
 Here, the result of this training are the models in **results/.../models** and the Top-1 and Top-5 Accuracy and ECE of the uncorrupted train and test datasets in **results/.../scores**.
 
@@ -55,7 +55,7 @@ The results are saved back to **results/.../scores**.
 
 Finally, to obtain the data results of the OOD-related experiments, the **test_ood.py** script must be used, whose operation is again identical to the previous case. As an example:
 ```
-python test_ood.py vc cifar100 resnet56 sgd-128-1e-1 fvvc-orth-10 --n_samples 128
+python test_ood.py cifar100 resnet56 fvvc-orth-10 sgd-128-1e-1 --n_samples 128
 ```
 And the results are stored in **results/.../scores**.
 
