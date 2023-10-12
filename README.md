@@ -49,7 +49,7 @@ Here, the result of this training are the models in **results/.../models** and t
 
 To obtain the Corrupted Data scores, the **test_uncertainty.py** script must be used. The use of the script is identical to the previous one. For example, in the case of the Variational Classifier:
 ```
-python test_uncertainty.py vc cifar100 resnet56 sgd-128-1e-1 fvvc-orth-10 --n_samples 128
+python test_uncertainty.py vc cifar100 resnet56 fvvc-orth-10 sgd-128-1e-1 --n_samples 128
 ```
 The results are saved back to **results/.../scores**.
 
